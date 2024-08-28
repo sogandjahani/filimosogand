@@ -12,7 +12,7 @@ async function fetchContent() {
             <div  class="swiper-slide bg-inherit justify-center flex items-center relative"><img class="rounded-[10px] opacity-70" src="${content.imgUrl}" alt="">
       <div class="text-[whitesmoke] text-center desktop:text-right mt-2 text-xs">${content.name}</div>
     <div class="absolute px-2 py-1 flex justify-center items-center top-1 right-2 bg-[#1d2b1f] text-[#4dab56] text-[10px] leading-4 rounded-3xl gap-1">
-      <img src="/images/icon-play.svg" alt="icon-play" class="w-full">
+      <img src="./images/icon-play.svg" alt="icon-play" class="w-full">
       رایگان
     </div>
   </div>
