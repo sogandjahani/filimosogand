@@ -1,159 +1,402 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-    font-family: IRANsans;
-    src: url("../font/IRANSans-web.eot");
-    src: url("../font/IRANSans-web.ttf");
-    src: url("../font/IRANSans-web.woff");
-    src: url("../font/IRANSans-web.woff2");
+@layer base {
+  @font-face {
+    font-family: IranSans;
+    src: url("../../fonts/IRANSansWebFaNum-Medium.eot");
+    src: url("../../fonts/IRANSansWebFaNum-Medium.ttf");
+    src: url("../../fonts/IRANSansWebFaNum-Medium.woff");
+    src: url("../../fonts/IRANSansWebFaNum-Medium.woff2");
   }
-  @layer components{
-    *{
-        direction: rtl;
-        font-family:IRANsans;
-        
-    }
-    .menu__text:hover
-    /* swiper */
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: white !important;
-      width: 40px !important;
-      height: 40px !important;
-      border-radius: 50% !important;
-      background-color: #151515;
-      bottom: 0 !important;
-      z-index: 1000;
-      position: absolute !important;
-    }
-    .swiper-button-next:after, .swiper-button-prev:after {
-      font-size: 14px !important;
-      
-    }
+  html {
+    font-family: IranSans;
+    text-decoration: none;
+  }
+}
 
-    .swiper-slide {
-      text-align: right;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    @media screen and (min-width: 1024px){
-      .comment__slide{
-        width: 430px !important;
-        height: 190px !important;
-        .com__text{
-          overflow-y: auto;
-          height: 85px;
-        }
-      }
-    }
+.tik {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.gradient {
+  background: radial-gradient(
+    130% 44% at 41% 40%,
+    rgba(0, 0, 0, 0) 0,
+    #151515 100%
+  );
+  z-index: 2;
+}
+.gradient2 {
+  background: linear-gradient(
+    186.97deg,
+    rgba(21, 21, 21, 0) 5.45%,
+    #151515 94.55%
+  );
+}
+.part3_3_1,
+.part3_3_3 {
+  img {
+    width: 27px;
+    height: 18px;
+  }
+}
+.part4_3_1 {
+  img {
+    width: 27px;
+    height: 18px;
+  }
+}
+.part4_3_2 {
+  img {
+    width: 27px;
+    height: 18px;
+  }
+}
+.part4svg {
+  width: 18px;
+  height: 18px;
+}
+.part6_gradient {
+  background: -webkit-linear-gradient(245deg, #05c3ff 0, #151515 40%);
+  opacity: 0.2;
+}
+.part7 {
+  background-image: url(../images/bg-cinama.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.part7_bottom {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #33353d;
+  box-shadow: 0 10px 36px #00000040;
+  border-radius: 12px;
+}
+.part7_span {
+  width: 45px;
+  height: 22px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 30%;
+}
+.part7mobile {
+  background-image: url(../images/bg-cinama.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.part7_span2 {
+  width: 75px;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 30%;
+}
+.part10_green {
+  background: -webkit-radial-gradient(
+    100% 100%,
+    100% 410.68%,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 29, 13, 0.54) 53.55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mix-blend-mode: color;
+}
+.item_sub {
+  transition-duration: 400ms;
+}
 
-   
-    
-    /* swiper */
-    .link::before {
-      content: '';
-      width: 10px;
-      height: 10px;
-      position: absolute;
-      bottom: -5px;
-      right: 40px;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-      background-color: #191919;
-      z-index: -1;  
+.submenu {
+  display: none;
+  transition: all 0.3s ease-out;
+}
+.menu_sub:hover {
+  .submenu {
+    display: block;
   }
-    .bodiless{
-      background: rgba(255, 255, 255, .06);
-      border: 1px solid #33353d;
-    }
-    .animation{
-      background: -webkit-linear-gradient(245deg, #05c3ff 0, #151515 40%);
-      
-      
-    }
-    .svg__prem{
-      scale: 0.7;
-    }
-    .tab-button {
-    
-      border-radius: 9999px; /* برای گرد کردن گوشه‌ها */
-      font-weight: bold;
-      padding: 4px 0;
-      transition: background-color 0.3s ease, color 0.3s ease;
+}
+.item_sub {
+  &:hover path {
+    fill: white;
+    stroke: white;
   }
-  
-  .tab-button.active {
-      background-color: #fbbf24; /* رنگ پس زمینه مشابه فیلیمو */
-      color: #1f2937; /* رنگ متن در حالت فعال */
-  }
-  
-  .tab-button:not(.active) {
-      background-color: transparent;
-      color: #fbbf24; /* رنگ متن برای دکمه غیرفعال */
-  }
-  
-  .tab-button:hover:not(.active) {
-      background-color: rgba(251, 191, 36, 0.1); /* رنگ پس زمینه هنگام هاور بر روی دکمه غیرفعال */
-  }
-  
-  
-  }
-  .favorite__info__dec {
-    position: relative;
-    z-index: 2;
-    max-width: 700px;
-    color: white;
-    text-align: justify;
-    font-size: 0.8em;
-    font-weight: bold;
-    line-height: 2rem;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    
-  }
-  @media screen and (min-width: 1024px){
-    .favorite__info__dec{
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-    }
+}
+.swiper-rtl .next_part5 {
+  width: 35px;
+  height: 35px;
+  background-color: #06060699;
+  border-radius: 50%;
+}
+.swiper-rtl .prevs_part5 {
+  width: 35px;
+  height: 35px;
+  background-color: #06060699;
+  border-radius: 50%;
+}
+.swiper-rtl .next_part5:after {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+.swiper-rtl .prevs_part5:after {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+.faq-item {
+  margin-bottom: 10px;
+  border: 1px solid #33353d;
+  border-radius: 8px;
+}
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #161616;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #33353d;
+  transition: color 0.3s ease, max-height 0.3s ease-out, padding 0.3s ease-out;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
 
-  }
-.serDiv:focus {
-    border: 1px solid white;/* بوردر به رنگ دلخواه هنگام فوکوس */
-    opacity: 1;
-  }
+.faq-question.active {
+  color: #f4843f; /* تغییر رنگ متن به #f4843f */
+}
 
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  background-color: #161616;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  color: #b6b6b6;
+  font-size: 13px;
+  line-height: 30px;
+}
 
-    #background {
-      transition: background-image 1s linear;
-      
+.faq-answer.open {
+  max-height: 1000px; /* مقدار بزرگ برای اطمینان از گشایش کامل */
+  padding: 10px;
+}
 
+.faq-question .toggle-icon {
+  font-size: 18px;
+}
+.toggle-icon {
+  color: #f4843f;
+}
+
+.comment {
+  height: 200px;
+}
+.swiper-rtl .next_part5 {
+  width: 35px;
+  height: 35px;
+  background-color: #06060699;
+  border-radius: 50%;
+}
+.swiper-rtl .prevs_part5 {
+  width: 35px;
+  height: 35px;
+  background-color: #06060699;
+  border-radius: 50%;
+}
+.swiper-rtl .next_part5:after {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+.swiper-rtl .prevs_part5:after {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+.intro_details {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  right: 100px;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+/* Fullscreen search styling */
+.fullscreen-search {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  justify-content: flex-start;
+  align-items: start;
+  padding-top: 100px;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.inputsearch {
+  width: 100%;
+  column-gap: 10px;
+}
+#searchInput {
+  width: 90%;
+  height: 41px;
+  padding: 15px;
+  font-size: 13px;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+.fullscreen-search .close-btn {
+  color: #fdc13c;
+  cursor: pointer;
+  &:hover {
+    color: #d19102;
+    transition-duration: 150ms;
   }
-     
-  
-  body {
-    
-    &::-webkit-scrollbar {
-      width: 10px;
-      background-color: gray;
-    }
-    &::-webkit-scrollbar-thumb{
-      background-color: lightgrey;
-    }
-  }
-  :root{
-    --filcolor:#1cb561;
+}
+
+/* Show fullscreen search when active */
+.fullscreen-search.active {
+  display: flex;
+}
+.scroll-to-top {
+  color: white;
+}
+
+.menu-container {
+  padding-left: 5px;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+/* Fullscreen menu */
+.fullscreen-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.menu-content {
+  text-align: center;
+  width: 100%;
+}
+
+.fullscreen-menu ul {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.fullscreen-menu li {
+  margin: 20px 0;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  font-size: 30px;
+  background-color: black;
+  cursor: pointer;
+  color: lightgray;
+}
+
+/* Show fullscreen menu when active */
+.fullscreen-menu.active {
+  display: flex;
+}
+
+/* Fullscreen section */
+.fullscreen-section {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.fullscreen-section .section-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  font-size: 30px;
+  background-color: black;
+  cursor: pointer;
+  color: lightgray;
+}
+
+/* Show the fullscreen section when active */
+.fullscreen-section.active {
+  display: flex; /* Show the section */
+}
+
+.fav {
+  margin-top: 100px;
+}
+.favourite__info {
+  height: 450px;
+  padding-top: 30px;
+}
+
+.tab-button {
+  border-radius: 9999px; /* برای گرد کردن گوشه‌ها */
+  font-weight: bold;
+  padding: 4px 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-button:active {
+  background-color: #fbbf24; /* رنگ پس زمینه مشابه فیلیمو */
+  color: #1f2937; /* رنگ متن در حالت فعال */
+}
+
+.tab-button:not(.active) {
+  background-color: transparent;
+  color: #fbbf24; /* رنگ متن برای دکمه غیرفعال */
+}
+
+.tab-button:hover:not(.active) {
+  background-color: rgba(
+    251,
+    191,
+    36,
+    0.1
+  ); /* رنگ پس زمینه هنگام هاور بر روی دکمه غیرفعال */
 }
